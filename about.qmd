@@ -7,14 +7,15 @@ title: "About me"
 
 <!-- Left column has a width of 4/12 and shows a picture of me -->
 ::: {.g-col-4}
-![](images/nickhand-profile.jpg){width=3in}
+![](images/cat.jpeg){width=3in}
 :::
 
 <!-- Text gets a column with width 8/12 -->
 ::: {.g-col-8}
 
-On this about page, you might want to add more information about yourself, 
-the project, or course. Any helpful context could go here!
+Welcome to my channel.
+
+Like and subscribe.
 
 My name is Emmy Park, a mere student for the course. You can find more 
 information about me on my [personal website](https://www.nickhand.dev/).

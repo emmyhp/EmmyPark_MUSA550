@@ -15,7 +15,7 @@ website:
     left: "&copy; CC-Nick Hand, 2023 (and edited by Emmy)"
 
   sidebar:
-    logo: "images/course-icon.png"
+    logo: "images/cat.jpeg"
     pinned: true
     align: center
     tools: 
@@ -42,6 +42,8 @@ website:
           - analysis/2-static-images.ipynb
           - analysis/3-altair-hvplot.ipynb
           - analysis/4-folium.ipynb
+          - analysis/5-lecture9A.ipynb
+          - analysis/6-lecture6A.ipynb
 
 format:
   html:

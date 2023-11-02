@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://musa-550-fall-2023.github.io/quarto-website-template/index.html</loc>
-    <lastmod>2023-11-02T19:44:57.237Z</lastmod>
+    <lastmod>2023-11-02T20:06:13.123Z</lastmod>
   </url>
   <url>
     <loc>https://musa-550-fall-2023.github.io/quarto-website-template/analysis/4-folium.html</loc>
@@ -14,18 +14,26 @@
   </url>
   <url>
     <loc>https://musa-550-fall-2023.github.io/quarto-website-template/about.html</loc>
-    <lastmod>2023-11-02T19:44:32.092Z</lastmod>
+    <lastmod>2023-11-02T20:10:05.314Z</lastmod>
   </url>
   <url>
     <loc>https://musa-550-fall-2023.github.io/quarto-website-template/analysis/1-python-code-blocks.html</loc>
-    <lastmod>2023-11-02T19:44:50.108Z</lastmod>
+    <lastmod>2023-11-02T20:05:06.270Z</lastmod>
   </url>
   <url>
     <loc>https://musa-550-fall-2023.github.io/quarto-website-template/analysis/3-altair-hvplot.html</loc>
-    <lastmod>2023-11-02T19:44:53.455Z</lastmod>
+    <lastmod>2023-11-02T20:06:40.980Z</lastmod>
   </url>
   <url>
     <loc>https://musa-550-fall-2023.github.io/quarto-website-template/analysis/index.html</loc>
     <lastmod>2023-11-02T19:44:56.081Z</lastmod>
+  </url>
+  <url>
+    <loc>https://musa-550-fall-2023.github.io/quarto-website-template/analysis/5-lecture9A.html</loc>
+    <lastmod>2023-11-02T20:02:38.064Z</lastmod>
+  </url>
+  <url>
+    <loc>https://musa-550-fall-2023.github.io/quarto-website-template/analysis/6-lecture6A.html</loc>
+    <lastmod>2023-11-02T20:05:10.518Z</lastmod>
   </url>
 </urlset>
