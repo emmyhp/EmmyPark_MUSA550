@@ -15,7 +15,7 @@ website:
     left: "&copy; Emmy Park"
 
   sidebar:
-    logo: "images/cat.jpeg"
+    logo: "FinalProject/potholes-in-philadelphia-web.jpg"
     pinned: true
     align: center
     tools: 
@@ -28,7 +28,7 @@ website:
 
     style: "docked"
     search: true
-    collapse-level: 2
+    collapse-level: 4
     contents:
       - href: index.qmd
         text: Welcome
@@ -40,11 +40,14 @@ website:
 format:
   html:
     highlight-style: solarized
-    theme: cosmo
+    theme: materia
     css: styles.css
     code-copy: true
     code-overflow: wrap
     toc: true
+    code-fold: show
+    $code-block-bg: "#ADD8E6"
+    code-tools: true
 
 
 
