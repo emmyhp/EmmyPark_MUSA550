@@ -5,29 +5,26 @@ project:
     port: 3333
 
 website:
-  title: "MUSA 550 Quarto Template"
-  site-url: "https://musa-550-fall-2023.github.io/quarto-website-template" 
+  title: "MUSA 550 - Final Project"
+  site-url: "https://musa-550-fall-2023.github.io/final_project_EP" 
   repo-url: https://github.com/MUSA-550-Fall-2023/quarto-website-template 
   repo-actions: [source]
 
   page-footer:
     right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
-    left: "&copy; CC-Nick Hand, 2023 (and edited by Emmy)"
+    left: "&copy; Emmy Park"
 
   sidebar:
     logo: "images/cat.jpeg"
     pinned: true
     align: center
     tools: 
-      - icon: globe
-        href: https://nickhand.dev
-        text: "Personal Website"
       - icon: github
-        href: https://github.com/MUSA-550-Fall-2023/
-        text: "MUSA 550 GitHub"
-      - icon: twitter
-        href: https://twitter.com/nicholashand
-        text: "Nick Hand Twitter"         
+        href: https://github.com/emmyhp
+        text: "EP GitHub"
+      - icon: linkedin
+        href: www.linkedin.com/in/emmy-park-5260b0183
+        text: "EP LinkedIn"         
 
     style: "docked"
     search: true
@@ -35,15 +32,10 @@ website:
     contents:
       - href: index.qmd
         text: Welcome
-      - about.qmd
       - section: analysis/index.qmd
         contents:
-          - analysis/1-python-code-blocks.qmd 
-          - analysis/2-static-images.ipynb
-          - analysis/3-altair-hvplot.ipynb
-          - analysis/4-folium.ipynb
-          - analysis/5-lecture9A.ipynb
-          - analysis/6-lecture6A.ipynb
+          - FinalProject/Step1.ipynb
+          - FinalProject/Step2.ipynb
 
 format:
   html:

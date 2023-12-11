@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://musa-550-fall-2023.github.io/quarto-website-template/index.html</loc>
-    <lastmod>2023-11-02T20:06:13.123Z</lastmod>
+    <lastmod>2023-11-02T20:26:06.130Z</lastmod>
   </url>
   <url>
     <loc>https://musa-550-fall-2023.github.io/quarto-website-template/analysis/4-folium.html</loc>
@@ -14,7 +14,11 @@
   </url>
   <url>
     <loc>https://musa-550-fall-2023.github.io/quarto-website-template/about.html</loc>
-    <lastmod>2023-11-02T20:18:23.835Z</lastmod>
+<<<<<<< HEAD
+    <lastmod>2023-11-02T20:26:19.535Z</lastmod>
+=======
+    <lastmod>2023-11-02T20:10:05.314Z</lastmod>
+>>>>>>> parent of 62d04f3 (Practice!)
   </url>
   <url>
     <loc>https://musa-550-fall-2023.github.io/quarto-website-template/analysis/1-python-code-blocks.html</loc>
@@ -34,6 +38,22 @@
   </url>
   <url>
     <loc>https://musa-550-fall-2023.github.io/quarto-website-template/analysis/6-lecture6A.html</loc>
-    <lastmod>2023-11-02T20:20:33.525Z</lastmod>
+<<<<<<< HEAD
+    <lastmod>2023-11-02T20:26:29.476Z</lastmod>
+  </url>
+  <url>
+    <loc>https://musa-550-fall-2023.github.io/final_project_EP/FinalProject/2023_311.html</loc>
+    <lastmod>2023-12-05T22:11:09.794Z</lastmod>
+  </url>
+  <url>
+    <loc>https://musa-550-fall-2023.github.io/final_project_EP/index.html</loc>
+    <lastmod>2023-12-05T21:34:50.119Z</lastmod>
+  </url>
+  <url>
+    <loc>https://musa-550-fall-2023.github.io/final_project_EP/about.html</loc>
+    <lastmod>2023-12-05T20:32:54.008Z</lastmod>
+=======
+    <lastmod>2023-11-02T20:05:10.518Z</lastmod>
+>>>>>>> parent of 62d04f3 (Practice!)
   </url>
 </urlset>

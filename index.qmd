@@ -1,34 +1,52 @@
 ---
-title: "MUSA 550 Final Project Template"
-subtitle: "An example website demonstrating the power of Quarto for sharing analyses on the web"
+title: "MUSA 550 - Final Project"
+subtitle: "Emmy Park"
 ---
 
-## Welcome! Get out of here!!
+## Predicting Philadelphia's 2024 Street Paving Plan
 
-We can create beautiful websites that describe complex technical analyses in Python using [Quarto](https://quarto.org) 
-and deploy them online using [GitHub Pages](https://pages.github.com/). This combination of tools is a really powerful way 
-to create and share your work. This website is a demo that is meant to be used to create your own Quarto website for the 
-final project in MUSA 550. 
+Each year, the Philadelphia Streets Department releases their annual Street Paving Program and List, detailing the 
+paving process and lists streets that the department will pave that year.
 
-Quarto is a relatively new tool, but is becoming popular quickly. It's a successor 
-to the Rmarkdown ecosystem that combines functionality into a single tool and also extends its computation power to other
-languages. Most importantly for us, Quarto supports executing Python code, allowing us to convert Jupyter notebooks to HTML and share them online.  
+When I interned for the Street Department, my coworkers joked that the way the list was decided was one person randomly 
+choosing whichever streets they thought needed it. I wanted to see whether or not that was actually the truth and if I can use 
+existing data about to test it.
 
-::: {.callout-important}
-This template site, including the layout it uses, is just a suggested place to start! For your final project, you're welcome (and encouraged) to 
-make as many changes as you like to best fit your project.
-:::
+I chose to use data about the street's physical and safety conditions to create the model. These data features include:
 
-## Find out more
+**1.** **311 Calls about Potholes** ([2022](https://opendataphilly.org/datasets/311-service-and-information-requests/)) ([2023](https://iframe.publicstuff.com/#?client_id=242))
 
-The code for this repository is hosted on our course's GitHub page: [https://github.com/MUSA-550-Fall-2023/quarto-website-template](https://github.com/MUSA-550-Fall-2023/quarto-website-template).
+More calls about potholes likely means that the street needs to be repaved more than others. However, it should be noted that 311 calls are a biased data source. 311 callers tend to be [whiter and richer](https://hunterurbanreview.commons.gc.cuny.edu/the-value-of-311-data/).
+        
+**2.** [**Whether Street is a Non-Thru Street for Trucks**](https://opendataphilly.org/datasets/non-thru-streets-for-trucks/)
 
-We covered the basics of getting started with Quarto and GitHub Pages in week 9. Take a look at
-[the slides for lecture 9A](https://musa-550-fall-2023.github.io/content/week-9/lecture-9A.html) to find out more.
+Without information on traffic levels for each street, we can use whether the street is open to trucks as a substitute.
 
+**3.** [**Street Classification**](https://opendataphilly.org/datasets/complete-streets/)
 
+Without information on traffic levels for each street, we can use street capacity as a substitute.
 
+**4.** [**Number of Fatal Crashes**](https://opendataphilly.org/datasets/fatal-crashes/) 
 
+OTIS often aligns their restriping/safety plans with streets that are about to be repaved. A higher share of crashes would indicate a bigger need for safety interventions.
 
+**5.** [**Level of Bike Stress**](https://www.dvrpc.org/webmaps/bike-lts/analysis/) 
 
- 
+The LTS classification scheme is DVRPC's estimation of comfort of bicyclists in traffic depending on number of lanes, effective vehicle speed, and presence/type of bicycle facility. Much like the crashes, a higher stress level should indicate a bigger need for bike safety interventions.
+
+**6.** **Whether Street Was Repaved in Previous Year** ([2022 Street Paving Program](https://www.phila.gov/media/20220323163849/streetpaving2022booklet.pdf))([2023 Street Paving Program](https://www.phila.gov/media/20230426182237/streetpaving2023-guide.pdf)
+
+A street that was repaved in the previous year would likely not need to be repaved in this round of repaving. 
+
+### Project Process
+
+The process to creating this model involves the following steps:
+
+**Step 1**: Gathering the data, downloading the information from OpenDataPhilly/DVRPC and using an API to gather 311 data.
+
+**Step 2**: Cleaning that data and joining it to the street network for analysis.
+
+**Step 3**: Involves creating the predictive model and testing its predictive power with the 2023 Street Paving Program and List.
+
+**Step 4**: Involves using the model to predict the streets being repaved in 2024 and mapping these streets.
+
