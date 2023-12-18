@@ -32,10 +32,14 @@ website:
     contents:
       - href: index.qmd
         text: Welcome
-      - section: analysis/index.qmd
+      - section: process.qmd
         contents:
           - FinalProject/Step1.ipynb
           - FinalProject/Step2.ipynb
+          - FinalProject/Step3.ipynb
+          - FinalProject/Step4v3.ipynb
+      - href: conclusion.qmd
+        text: Conclusion
 
 format:
   html:

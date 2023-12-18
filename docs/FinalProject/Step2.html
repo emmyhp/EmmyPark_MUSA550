@@ -109,7 +109,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../analysis/index.html">Analysis</a></li><li class="breadcrumb-item"><a href="../FinalProject/Step2.html"><strong>Step 2: Clean &amp; Merge Project Data</strong></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../process.html">Project Process</a></li><li class="breadcrumb-item"><a href="../FinalProject/Step2.html">Step 2: Clean &amp; Merge Project Data</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -146,8 +146,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../analysis/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Analysis</span></a>
+            <a href="../process.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Project Process</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -156,17 +156,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FinalProject/Step1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><strong>Step 1: Download Project Data</strong></span></a>
+ <span class="menu-text">Step 1: Download Project Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FinalProject/Step2.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><strong>Step 2: Clean &amp; Merge Project Data</strong></span></a>
+ <span class="menu-text">Step 2: Clean &amp; Merge Project Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FinalProject/Step3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Step 3: Create a Predictive Model</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../FinalProject/Step4v3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Step 4: Predict Paving</span></a>
   </div>
 </li>
       </ul>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../conclusion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conclusion</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -193,7 +211,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><strong>Step 2: Clean &amp; Merge Project Data</strong></h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Step 2: Clean &amp; Merge Project Data</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
 </div>
 
 
@@ -226,21 +244,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="street-data" class="level3">
 <h3 class="anchored" data-anchor-id="street-data"><strong>Street Data</strong></h3>
 <p>Read in street centerline data</p>
-<div class="cell" data-tags="[]" data-execution_count="73">
+<div class="cell" data-tags="[]" data-execution_count="3">
 <details open="">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>street <span class="op">=</span> gpd.read_file(<span class="st">"Data/Street_Centerline.geojson"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>Clean up street centerline data to keep only relevant information</p>
-<div class="cell" data-tags="[]" data-execution_count="361">
+<div class="cell" data-tags="[]" data-execution_count="4">
 <details open="">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>cols_to_keep <span class="op">=</span> [<span class="st">"R_HUNDRED"</span>, <span class="st">"CLASS"</span>, <span class="st">"STNAME"</span>,<span class="st">"ST_CODE"</span>,<span class="st">"SEG_ID"</span>, <span class="st">"Shape__Length"</span>, <span class="st">"geometry"</span>]</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>street <span class="op">=</span> street[cols_to_keep]</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>street.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="361">
+<div class="cell-output cell-output-display" data-execution_count="4">
 <div>
 
 
@@ -314,7 +332,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div class="cell" data-tags="[]" data-execution_count="364">
+<div class="cell" data-tags="[]" data-execution_count="5">
 <details open="">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>street.to_file(<span class="st">"Data/street_clean.geojson"</span>, driver<span class="op">=</span><span class="st">'GeoJSON'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -323,36 +341,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="paving-data" class="level3">
 <h3 class="anchored" data-anchor-id="paving-data"><strong>Paving Data</strong></h3>
-<section id="httpswww.phila.govmedia20220323163849streetpaving2022booklet.pdf" class="level4">
-<h4 class="anchored" data-anchor-id="httpswww.phila.govmedia20220323163849streetpaving2022booklet.pdf"><strong>2022 - https://www.phila.gov/media/20220323163849/streetpaving2022booklet.pdf</strong></h4>
-<p>Read in .csv made from PDF of 2022 paving program</p>
-<div class="cell" data-tags="[]">
+<section id="section" class="level5">
+<h5 class="anchored" data-anchor-id="section"><strong>2022</strong></h5>
+<p>Read in .csv made from PDF of 2022 paving program. Keep only relevant information and rename columns to match the street centerline data. Create a new column for whether the street was paved in 2022.</p>
+<p>1 = The street was paved in 2022. 0 = The street was not paved in 2022.</p>
+<div class="cell" data-tags="[]" data-execution_count="6">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>pav_2022 <span class="op">=</span> pd.read_csv(<span class="st">"Data/2022_Paving.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>pav_2022 <span class="op">=</span> pd.read_csv(<span class="st">"Data/2022_Paving.csv"</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>cols_to_drop <span class="op">=</span> [<span class="st">"Unnamed: 12"</span>, <span class="st">"Unnamed: 11"</span>, <span class="st">"Unnamed: 10"</span>, </span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>                <span class="st">"PAVING PROGRAM"</span>, <span class="st">"ROADWAY RESURFACING RATING"</span>, </span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>                <span class="st">"EMERGENCY UTILITY WORK"</span>, <span class="st">"DITCHES"</span>, <span class="st">"POTHOLES"</span>, </span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>                <span class="st">"CITY COUNCIL DISTRICT"</span>]</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>pav_2022 <span class="op">=</span> pav_2022.drop(columns<span class="op">=</span>cols_to_drop)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>pav_2022[<span class="st">'2022_Paved'</span>]<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>pav_2022.rename(columns<span class="op">=</span>{<span class="st">'HUNDRED'</span>: <span class="st">'R_HUNDRED'</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>pav_2022.rename(columns<span class="op">=</span>{<span class="st">'STREET'</span>: <span class="st">'STNAME'</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>pav_2022.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-</div>
-<p>Keep only relevant information</p>
-<div class="cell" data-tags="[]" data-execution_count="78">
-<details open="">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>cols_to_drop <span class="op">=</span> [<span class="st">"Unnamed: 12"</span>, <span class="st">"Unnamed: 11"</span>, <span class="st">"Unnamed: 10"</span>, </span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>                <span class="st">"PAVING PROGRAM"</span>, <span class="st">"ROADWAY RESURFACING RATING"</span>, </span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>                <span class="st">"EMERGENCY UTILITY WORK"</span>, <span class="st">"DITCHES"</span>, <span class="st">"POTHOLES"</span>, </span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>                <span class="st">"CITY COUNCIL DISTRICT"</span>]</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>pav_2022 <span class="op">=</span> pav_2022.drop(columns<span class="op">=</span>cols_to_drop)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<p>Rename columns to match the street centerline data. Create a new column for whether the street was paved in 2022. 1 = The street was paved in 2022. 0 = The street was not paved in 2022.</p>
-<div class="cell" data-tags="[]" data-execution_count="359">
-<details open="">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>pav_2022[<span class="st">'2022_Paved'</span>]<span class="op">=</span><span class="dv">1</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>pav_2022.rename(columns<span class="op">=</span>{<span class="st">'HUNDRED'</span>: <span class="st">'R_HUNDRED'</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>pav_2022.rename(columns<span class="op">=</span>{<span class="st">'STREET'</span>: <span class="st">'STNAME'</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>pav_2022.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display" data-execution_count="359">
+<div class="cell-output cell-output-display" data-execution_count="6">
 <div>
 
 
@@ -415,20 +427,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Merge paving data with the street centerline by the street name and number.</p>
-<div class="cell" data-tags="[]" data-execution_count="360">
+<div class="cell" data-tags="[]" data-execution_count="32">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>street_merge_2022_pav <span class="op">=</span> pd.merge(street, pav_2022, how<span class="op">=</span><span class="st">'left'</span>, on<span class="op">=</span>[<span class="st">'STNAME'</span>, <span class="st">'R_HUNDRED'</span>])</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>cols_to_drop <span class="op">=</span> [<span class="st">'FROM'</span>, <span class="st">'TO'</span>]</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>street_merge_2022_pav <span class="op">=</span> street_merge_2022_pav.drop(columns <span class="op">=</span> cols_to_drop)</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>street_merge_2022_pav<span class="op">=</span>street_merge_2022_pav.drop_duplicates(subset<span class="op">=</span>[<span class="st">'R_HUNDRED'</span>, <span class="st">'STNAME'</span>, <span class="st">'2022_Paved'</span>])</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>street_merge_2022_pav[<span class="st">'2022_Paved'</span>].fillna(<span class="dv">0</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>street_merge_2022_pav.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>street_merge_2022_pav <span class="op">=</span> pd.merge(street, pav_2022, how<span class="op">=</span><span class="st">'left'</span>, on<span class="op">=</span>[<span class="st">'STNAME'</span>, <span class="st">'R_HUNDRED'</span>])</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>cols_to_drop <span class="op">=</span> [<span class="st">'FROM'</span>, <span class="st">'TO'</span>]</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>street_merge_2022_pav <span class="op">=</span> street_merge_2022_pav.drop(columns <span class="op">=</span> cols_to_drop)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>street_merge_2022_pav<span class="op">=</span>street_merge_2022_pav.drop_duplicates(subset<span class="op">=</span>[<span class="st">'R_HUNDRED'</span>, <span class="st">'STNAME'</span>, <span class="st">'SEG_ID'</span>])</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>street_merge_2022_pav[<span class="st">'2022_Paved'</span>].fillna(<span class="dv">0</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>street_merge_2022_pav.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="360">
+<div class="cell-output cell-output-display" data-execution_count="32">
 <div>
 
 
@@ -509,33 +521,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="httpswww.phila.govmedia20230426182237streetpaving2023-guide.pdf" class="level4">
-<h4 class="anchored" data-anchor-id="httpswww.phila.govmedia20230426182237streetpaving2023-guide.pdf"><strong>2023 - https://www.phila.gov/media/20230426182237/streetpaving2023-guide.pdf</strong></h4>
-<p>Read in .csv made from PDF of 2023 paving program</p>
-<div class="cell" data-tags="[]">
+<section id="section-1" class="level5">
+<h5 class="anchored" data-anchor-id="section-1"><strong>2023</strong></h5>
+<p>Read in .csv made from PDF of 2023 paving program. Keep only relevant information and rename columns to match the street centerline data. Create a new column for whether the street was paved in 2023.</p>
+<p>1 = The street was paved in 2023. 0 = The street was not paved in 2023.</p>
+<div class="cell" data-tags="[]" data-execution_count="21">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>pav_2023 <span class="op">=</span> pd.read_csv(<span class="st">"Data/2023_Paving.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>pav_2023 <span class="op">=</span> pd.read_csv(<span class="st">"Data/2023_Paving.csv"</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>cols_to_keep <span class="op">=</span> [<span class="st">"HUNDRED"</span>, <span class="st">"ON"</span>]</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>pav_2023 <span class="op">=</span> pav_2023[cols_to_keep]</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>pav_2023[<span class="st">'2023_Paved'</span>]<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>pav_2023.rename(columns<span class="op">=</span>{<span class="st">'HUNDRED'</span>: <span class="st">'R_HUNDRED'</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>pav_2023.rename(columns<span class="op">=</span>{<span class="st">'ON'</span>: <span class="st">'STNAME'</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>pav_2023.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-</div>
-<p>Keep only relevant information</p>
-<div class="cell" data-tags="[]" data-execution_count="83">
-<details open="">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>cols_to_keep <span class="op">=</span> [<span class="st">"HUNDRED"</span>, <span class="st">"ON"</span>]</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>pav_2023 <span class="op">=</span> pav_2023[cols_to_keep]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<p>Rename column to match the street centerline data. Create a new column for whether the street was paved in 2023. 1 = The street was paved in 2023. 0 = The street was not paved in 2023.</p>
-<div class="cell" data-tags="[]" data-execution_count="84">
-<details open="">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>pav_2023[<span class="st">'2023_Paved'</span>]<span class="op">=</span><span class="dv">1</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>pav_2023.rename(columns<span class="op">=</span>{<span class="st">'HUNDRED'</span>: <span class="st">'R_HUNDRED'</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>pav_2023.rename(columns<span class="op">=</span>{<span class="st">'ON'</span>: <span class="st">'STNAME'</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>pav_2023.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display" data-execution_count="84">
+<div class="cell-output cell-output-display" data-execution_count="21">
 <div>
 
 
@@ -543,8 +548,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">HUNDRED</th>
-<th data-quarto-table-cell-role="th">ON</th>
+<th data-quarto-table-cell-role="th">R_HUNDRED</th>
+<th data-quarto-table-cell-role="th">STNAME</th>
 <th data-quarto-table-cell-role="th">2023_Paved</th>
 </tr>
 </thead>
@@ -586,19 +591,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Merge paving data with the street centerline by the street name and number.</p>
-<div class="cell" data-tags="[]" data-execution_count="362">
+<div class="cell" data-tags="[]" data-execution_count="33">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>pav_2023[<span class="st">'R_HUNDRED'</span>] <span class="op">=</span> pd.to_numeric(pav_2023[<span class="st">'R_HUNDRED'</span>], errors<span class="op">=</span><span class="st">'coerce'</span>)</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>street_merge_2023_pav <span class="op">=</span> pd.merge(street, pav_2023, how<span class="op">=</span><span class="st">'left'</span>, on<span class="op">=</span>[<span class="st">'STNAME'</span>, <span class="st">'R_HUNDRED'</span>])</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>street_merge_2023_pav<span class="op">=</span>street_merge_2023_pav.drop_duplicates(subset<span class="op">=</span>[<span class="st">'R_HUNDRED'</span>, <span class="st">'STNAME'</span>, <span class="st">'2023_Paved'</span>])</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>street_merge_2023_pav[<span class="st">'2023_Paved'</span>].fillna(<span class="dv">0</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>street_merge_2023_pav.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>pav_2023[<span class="st">'R_HUNDRED'</span>] <span class="op">=</span> pd.to_numeric(pav_2023[<span class="st">'R_HUNDRED'</span>], errors<span class="op">=</span><span class="st">'coerce'</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>street_merge_2023_pav <span class="op">=</span> pd.merge(street, pav_2023, how<span class="op">=</span><span class="st">'left'</span>, on<span class="op">=</span>[<span class="st">'STNAME'</span>, <span class="st">'R_HUNDRED'</span>])</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>street_merge_2023_pav<span class="op">=</span>street_merge_2023_pav.drop_duplicates(subset<span class="op">=</span>[<span class="st">'R_HUNDRED'</span>, <span class="st">'STNAME'</span>, <span class="st">'SEG_ID'</span>])</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>street_merge_2023_pav[<span class="st">'2023_Paved'</span>].fillna(<span class="dv">0</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>street_merge_2023_pav.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="362">
+<div class="cell-output cell-output-display" data-execution_count="33">
 <div>
 
 
@@ -679,18 +684,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="combine-paving" class="level4">
-<h4 class="anchored" data-anchor-id="combine-paving"><strong>Combine Paving</strong></h4>
-<div class="cell" data-tags="[]" data-execution_count="131">
+<section id="combine-paving" class="level5">
+<h5 class="anchored" data-anchor-id="combine-paving"><strong>Combine Paving</strong></h5>
+<div class="cell" data-tags="[]" data-execution_count="34">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>street_merge_pav <span class="op">=</span> pd.merge(street_merge_2022_pav, </span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>                            street_merge_2023_pav, </span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>                            how <span class="op">=</span> <span class="st">'left'</span>, </span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>                            on <span class="op">=</span>[<span class="st">'R_HUNDRED'</span>, <span class="st">'CLASS'</span>, <span class="st">'STNAME'</span>, <span class="st">'ST_CODE'</span>, <span class="st">'SEG_ID'</span>,<span class="st">'Shape__Length'</span>,<span class="st">'geometry'</span>])</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>street_merge_pav.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>street_merge_pav <span class="op">=</span> pd.merge(street_merge_2022_pav, </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>                            street_merge_2023_pav, </span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>                            how <span class="op">=</span> <span class="st">'left'</span>, </span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>                            on <span class="op">=</span>[<span class="st">'R_HUNDRED'</span>, <span class="st">'CLASS'</span>, <span class="st">'STNAME'</span>, <span class="st">'ST_CODE'</span>, <span class="st">'SEG_ID'</span>,<span class="st">'Shape__Length'</span>,<span class="st">'geometry'</span>])</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>street_merge_pav.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="131">
+<div class="cell-output cell-output-display" data-execution_count="34">
 <div>
 
 
@@ -776,23 +781,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+<div class="cell" data-tags="[]" data-execution_count="28">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>street_merge_pav.to_file(<span class="st">"Data/street_merge_pav.geojson"</span>, driver<span class="op">=</span><span class="st">'GeoJSON'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
 </section>
 <section id="no-thru-trucks" class="level3">
 <h3 class="anchored" data-anchor-id="no-thru-trucks"><strong>No Thru Trucks</strong></h3>
-<div class="cell" data-tags="[]">
-<details open="">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>truck <span class="op">=</span> gpd.read_file(<span class="st">"Data/No_thru_Trucks.geojson"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<p>Create a column for whether or not the street is a thru street for trucks. 1 = Not a thru street for trucks, 0 = A thru street for trucks.</p>
+<p>Load in the “No Thru Truck” data/ Create a column for whether or not the street is a thru street for trucks. 1 = Not a thru street for trucks, 0 = A thru street for trucks.</p>
 <div class="cell" data-tags="[]" data-execution_count="363">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>truck[<span class="st">'Truck'</span>]<span class="op">=</span><span class="dv">1</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>truck <span class="op">=</span> truck[[<span class="st">'SEG_ID'</span>, <span class="st">'ST_CODE'</span>, <span class="st">'STNAME'</span>,<span class="st">'geometry'</span>, <span class="st">'Truck'</span>]]</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>truck.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>truck <span class="op">=</span> gpd.read_file(<span class="st">"Data/No_thru_Trucks.geojson"</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>truck[<span class="st">'Truck'</span>]<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>truck <span class="op">=</span> truck[[<span class="st">'SEG_ID'</span>, <span class="st">'ST_CODE'</span>, <span class="st">'STNAME'</span>,<span class="st">'geometry'</span>, <span class="st">'Truck'</span>]]</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>truck.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display" data-execution_count="363">
 <div>
@@ -856,15 +864,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+<p>Merge truck data with street data.</p>
 <div class="cell" data-tags="[]" data-execution_count="147">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>street_merge_truck <span class="op">=</span> pd.merge(street, truck, how<span class="op">=</span><span class="st">'left'</span>, on<span class="op">=</span>[<span class="st">'STNAME'</span>, <span class="st">'ST_CODE'</span>, <span class="st">'SEG_ID'</span>, <span class="st">'geometry'</span>])</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>street_merge_truck<span class="op">=</span>street_merge_truck.drop_duplicates(subset<span class="op">=</span>[<span class="st">'STNAME'</span>, <span class="st">'ST_CODE'</span>, <span class="st">'SEG_ID'</span>,<span class="st">'geometry'</span>])</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>street_merge_truck[<span class="st">'Truck'</span>].fillna(<span class="dv">0</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>street_merge_truck.sort_values(by<span class="op">=</span><span class="st">'Truck'</span>, ascending<span class="op">=</span><span class="va">False</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>street_merge_truck.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>street_merge_truck <span class="op">=</span> pd.merge(street, truck, how<span class="op">=</span><span class="st">'left'</span>, on<span class="op">=</span>[<span class="st">'STNAME'</span>, <span class="st">'ST_CODE'</span>, <span class="st">'SEG_ID'</span>, <span class="st">'geometry'</span>])</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>street_merge_truck<span class="op">=</span>street_merge_truck.drop_duplicates(subset<span class="op">=</span>[<span class="st">'STNAME'</span>, <span class="st">'ST_CODE'</span>, <span class="st">'SEG_ID'</span>,<span class="st">'geometry'</span>])</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>street_merge_truck[<span class="st">'Truck'</span>].fillna(<span class="dv">0</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>street_merge_truck.sort_values(by<span class="op">=</span><span class="st">'Truck'</span>, ascending<span class="op">=</span><span class="va">False</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>street_merge_truck.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display" data-execution_count="147">
 <div>
@@ -946,25 +955,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+<div class="cell" data-tags="[]" data-execution_count="366">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>street_merge_truck.to_file(<span class="st">"Data/street_merge_truck.geojson"</span>, driver<span class="op">=</span><span class="st">'GeoJSON'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
 <section id="calls" class="level3">
 <h3 class="anchored" data-anchor-id="calls"><strong>311 Calls</strong></h3>
-<section id="section" class="level4">
-<h4 class="anchored" data-anchor-id="section"><strong>2022</strong></h4>
-<p>Load in 311 data:</p>
-<div class="cell" data-tags="[]">
-<details open="">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>call311_2022 <span class="op">=</span> pd.read_csv(<span class="st">"Data/2022_311.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<p>Clean data, filter it so it’s only “Street Defect”</p>
+<section id="section-2" class="level5">
+<h5 class="anchored" data-anchor-id="section-2"><strong>2022</strong></h5>
+<p>Load in 311 data. Clean data, filter it so it’s only “Street Defect”</p>
 <div class="cell" data-tags="[]" data-execution_count="250">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>call311_2022.dropna(subset<span class="op">=</span>[<span class="st">'lat'</span>], inplace<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>call311_2022<span class="op">=</span>call311_2022[call311_2022[<span class="st">'service_name'</span>] <span class="op">==</span> <span class="st">"Street Defect"</span>]</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>call311_2022.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>call311_2022 <span class="op">=</span> pd.read_csv(<span class="st">"Data/2022_311.csv"</span>)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>call311_2022.dropna(subset<span class="op">=</span>[<span class="st">'lat'</span>], inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>call311_2022<span class="op">=</span>call311_2022[call311_2022[<span class="st">'service_name'</span>] <span class="op">==</span> <span class="st">"Street Defect"</span>]</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>call311_2022.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display" data-execution_count="250">
 <div>
@@ -1110,56 +1119,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell" data-tags="[]" data-execution_count="251">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>call311_2022_geo<span class="op">=</span> [Point(xy) <span class="cf">for</span> xy <span class="kw">in</span> <span class="bu">zip</span>(call311_2022[<span class="st">'lon'</span>], call311_2022[<span class="st">'lat'</span>])]</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>call311_2022_gdf<span class="op">=</span> gpd.GeoDataFrame(call311_2022, geometry<span class="op">=</span>call311_2022_geo)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>call311_2022_geo<span class="op">=</span> [Point(xy) <span class="cf">for</span> xy <span class="kw">in</span> <span class="bu">zip</span>(call311_2022[<span class="st">'lon'</span>], call311_2022[<span class="st">'lat'</span>])]</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>call311_2022_gdf<span class="op">=</span> gpd.GeoDataFrame(call311_2022, geometry<span class="op">=</span>call311_2022_geo)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>call311_2022_gdf.set_crs(epsg<span class="op">=</span><span class="dv">4326</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(call311_2022_gdf.crs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-</div>
-<div class="cell" data-tags="[]" data-execution_count="252">
-<details open="">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>call311_2022_gdf.set_crs(epsg<span class="op">=</span><span class="dv">4326</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(call311_2022_gdf.crs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>EPSG:4326</code></pre>
-</div>
 </div>
 <p>Create a function that counts the number of points within a buffer of each road segment</p>
 <div class="cell" data-tags="[]" data-execution_count="269">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a function to count points near each segment</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> count_points_near_segment(segment_geometry, points, buffer_distance<span class="op">=</span><span class="fl">.00002</span>): <span class="co">#buffer of approximately 10m</span></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Buffer the segment geometry to create a buffer around it</span></span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>    buffered_segment <span class="op">=</span> segment_geometry.<span class="bu">buffer</span>(buffer_distance)</span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Check if each point is within the buffered segment</span></span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>    points_near_segment <span class="op">=</span> points[points.geometry.within(buffered_segment)]</span>
-<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Return the count of points near the segment</span></span>
-<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">len</span>(points_near_segment)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a function to count points near each segment</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> count_points_near_segment(segment_geometry, points, buffer_distance<span class="op">=</span><span class="fl">.00002</span>): <span class="co">#buffer of approximately 10m</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Buffer the segment geometry to create a buffer around it</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    buffered_segment <span class="op">=</span> segment_geometry.<span class="bu">buffer</span>(buffer_distance)</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Check if each point is within the buffered segment</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    points_near_segment <span class="op">=</span> points[points.geometry.within(buffered_segment)]</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Return the count of points near the segment</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">len</span>(points_near_segment)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>Create new file with a column for the count of points for each segment</p>
-<div class="cell" data-tags="[]" data-execution_count="254">
-<details open="">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>street_merge_311_2022 <span class="op">=</span> street.copy()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div class="cell" data-tags="[]" data-execution_count="270">
-<details open="">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new column in the geojson GeoDataFrame to store the point counts</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>street_merge_311_2022[<span class="st">'311_2022'</span>] <span class="op">=</span> street[<span class="st">'geometry'</span>].<span class="bu">apply</span>(</span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">lambda</span> x: count_points_near_segment(x, call311_2022_gdf[<span class="st">'geometry'</span>])</span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
 <div class="cell" data-tags="[]" data-execution_count="342">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>street_merge_311_2022.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>street_merge_311_2022 <span class="op">=</span> street.copy()</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new column in the geojson GeoDataFrame to store the point counts</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>street_merge_311_2022[<span class="st">'311_2022'</span>] <span class="op">=</span> street[<span class="st">'geometry'</span>].<span class="bu">apply</span>(</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">lambda</span> x: count_points_near_segment(x, call311_2022_gdf[<span class="st">'geometry'</span>])</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>street_merge_311_2022.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display" data-execution_count="342">
 <div>
@@ -1242,61 +1233,40 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="section-1" class="level4">
-<h4 class="anchored" data-anchor-id="section-1"><strong>2023</strong></h4>
-<p>Load in 311 data:</p>
-<div class="cell" data-tags="[]">
-<details open="">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>call311_2023 <span class="op">=</span> pd.read_csv(<span class="st">"Data/2023_311.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<p>Clean data, filter it so it’s only “Street Defect”</p>
+<section id="section-3" class="level5">
+<h5 class="anchored" data-anchor-id="section-3"><strong>2023</strong></h5>
+<p>Load in 311 data and remove any rows without location.</p>
 <div class="cell" data-tags="[]" data-execution_count="290">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>call311_2023.dropna(subset<span class="op">=</span>[<span class="st">'lat'</span>], inplace<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>call311_2023 <span class="op">=</span> pd.read_csv(<span class="st">"Data/2023_311.csv"</span>)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>call311_2023.dropna(subset<span class="op">=</span>[<span class="st">'lat'</span>], inplace<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>Convert the .csv to a geodataframe</p>
-<div class="cell" data-tags="[]" data-execution_count="291">
-<details open="">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>call311_2023_geo<span class="op">=</span> [Point(xy) <span class="cf">for</span> xy <span class="kw">in</span> <span class="bu">zip</span>(call311_2023[<span class="st">'lon'</span>], call311_2023[<span class="st">'lat'</span>])]</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>call311_2023_gdf<span class="op">=</span> gpd.GeoDataFrame(call311_2023, geometry<span class="op">=</span>call311_2023_geo)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
 <div class="cell" data-tags="[]" data-execution_count="292">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>call311_2023_gdf.set_crs(epsg<span class="op">=</span><span class="dv">4326</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(call311_2023_gdf.crs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>call311_2023_geo<span class="op">=</span> [Point(xy) <span class="cf">for</span> xy <span class="kw">in</span> <span class="bu">zip</span>(call311_2023[<span class="st">'lon'</span>], call311_2023[<span class="st">'lat'</span>])]</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>call311_2023_gdf<span class="op">=</span> gpd.GeoDataFrame(call311_2023, geometry<span class="op">=</span>call311_2023_geo)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>call311_2023_gdf.set_crs(epsg<span class="op">=</span><span class="dv">4326</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(call311_2023_gdf.crs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>EPSG:4326</code></pre>
 </div>
 </div>
 <p>Create new file with a column for the count of points for each segment</p>
-<div class="cell" data-tags="[]" data-execution_count="295">
-<details open="">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>street_merge_311_2023 <span class="op">=</span> street.copy()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div class="cell" data-tags="[]" data-execution_count="312">
-<details open="">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new column in the geojson GeoDataFrame to store the point counts</span></span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>street_merge_311_2023[<span class="st">'311_2023'</span>] <span class="op">=</span> street[<span class="st">'geometry'</span>].<span class="bu">apply</span>(</span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">lambda</span> x: count_points_near_segment(x, call311_2023_gdf[<span class="st">'geometry'</span>])</span>
-<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
 <div class="cell" data-tags="[]" data-execution_count="341">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>street_merge_311_2023 <span class="op">=</span> street_merge_311_2023.sort_values(by<span class="op">=</span><span class="st">'311_2023'</span>, ascending<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>street_merge_311_2023.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>street_merge_311_2023 <span class="op">=</span> street.copy()</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new column in the geojson GeoDataFrame to store the point counts</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>street_merge_311_2023[<span class="st">'311_2023'</span>] <span class="op">=</span> street[<span class="st">'geometry'</span>].<span class="bu">apply</span>(</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">lambda</span> x: count_points_near_segment(x, call311_2023_gdf[<span class="st">'geometry'</span>])</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>street_merge_311_2023 <span class="op">=</span> street_merge_311_2023.sort_values(by<span class="op">=</span><span class="st">'311_2023'</span>, ascending<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>street_merge_311_2023.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display" data-execution_count="341">
 <div>
@@ -1379,16 +1349,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="combine-311-data" class="level4">
-<h4 class="anchored" data-anchor-id="combine-311-data"><strong>Combine 311 Data</strong></h4>
+<section id="combine-311-data" class="level5">
+<h5 class="anchored" data-anchor-id="combine-311-data"><strong>Combine 311 Data</strong></h5>
 <div class="cell" data-tags="[]" data-execution_count="343">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>street_merge_311 <span class="op">=</span> pd.merge(street_merge_311_2022, </span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>                            street_merge_311_2023, </span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>                            how <span class="op">=</span> <span class="st">'left'</span>, </span>
-<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>                            on <span class="op">=</span>[<span class="st">'R_HUNDRED'</span>, <span class="st">'CLASS'</span>, <span class="st">'STNAME'</span>, <span class="st">'ST_CODE'</span>, <span class="st">'SEG_ID'</span>,<span class="st">'Shape__Length'</span>,<span class="st">'geometry'</span>])</span>
-<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>street_merge_311.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>street_merge_311 <span class="op">=</span> pd.merge(street_merge_311_2022, </span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>                            street_merge_311_2023, </span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>                            how <span class="op">=</span> <span class="st">'left'</span>, </span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>                            on <span class="op">=</span>[<span class="st">'R_HUNDRED'</span>, <span class="st">'CLASS'</span>, <span class="st">'STNAME'</span>, <span class="st">'ST_CODE'</span>, <span class="st">'SEG_ID'</span>,<span class="st">'Shape__Length'</span>,<span class="st">'geometry'</span>])</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>street_merge_311.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display" data-execution_count="343">
 <div>
@@ -1476,6 +1446,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+<div class="cell" data-tags="[]" data-execution_count="367">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>street_merge_311.to_file(<span class="st">"Data/street_merge_311.geojson"</span>, driver<span class="op">=</span><span class="st">'GeoJSON'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
 </section>
 <section id="crashes" class="level3">
@@ -1484,8 +1460,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell" data-tags="[]" data-execution_count="318">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>crash <span class="op">=</span> gpd.read_file(<span class="st">"Data/fatal_crashes.geojson"</span>)</span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>crash.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>crash <span class="op">=</span> gpd.read_file(<span class="st">"Data/fatal_crashes.geojson"</span>)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>crash.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display" data-execution_count="318">
 <div>
@@ -1639,13 +1615,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<section id="section-2" class="level4">
-<h4 class="anchored" data-anchor-id="section-2"><strong>2022</strong></h4>
+<section id="section-4" class="level5">
+<h5 class="anchored" data-anchor-id="section-4"><strong>2022</strong></h5>
+<p>Pull out the 2022 crash data.</p>
 <div class="cell" data-tags="[]" data-execution_count="322">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>crash[<span class="st">'date_'</span>] <span class="op">=</span> crash[<span class="st">'date_'</span>].astype(<span class="bu">str</span>)</span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>crash_2022 <span class="op">=</span> crash[crash[<span class="st">'date_'</span>].<span class="bu">str</span>.contains(<span class="st">'2022'</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>crash[<span class="st">'date_'</span>] <span class="op">=</span> crash[<span class="st">'date_'</span>].astype(<span class="bu">str</span>)</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>crash_2022 <span class="op">=</span> crash[crash[<span class="st">'date_'</span>].<span class="bu">str</span>.contains(<span class="st">'2022'</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display" data-execution_count="322">
 <div>
@@ -1799,26 +1776,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div class="cell" data-tags="[]" data-execution_count="328">
-<details open="">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>street_merge_crash_2022 <span class="op">=</span> street.copy()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div class="cell" data-tags="[]" data-execution_count="329">
-<details open="">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new column in the geojson GeoDataFrame to store the point counts</span></span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>street_merge_crash_2022[<span class="st">'crash_2022'</span>] <span class="op">=</span> street[<span class="st">'geometry'</span>].<span class="bu">apply</span>(</span>
-<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">lambda</span> x: count_points_near_segment(x, crash_2022[<span class="st">'geometry'</span>])</span>
-<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
+<p>Count number of crash points near each street segment.</p>
 <div class="cell" data-tags="[]" data-execution_count="336">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>street_merge_crash_2022 <span class="op">=</span> street_merge_crash_2022.sort_values(by<span class="op">=</span><span class="st">'crash_2022'</span>, ascending<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>street_merge_crash_2022.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>street_merge_crash_2022 <span class="op">=</span> street.copy()</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new column in the geojson GeoDataFrame to store the point counts</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>street_merge_crash_2022[<span class="st">'crash_2022'</span>] <span class="op">=</span> street[<span class="st">'geometry'</span>].<span class="bu">apply</span>(</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">lambda</span> x: count_points_near_segment(x, crash_2022[<span class="st">'geometry'</span>])</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>street_merge_crash_2022 <span class="op">=</span> street_merge_crash_2022.sort_values(by<span class="op">=</span><span class="st">'crash_2022'</span>, ascending<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>street_merge_crash_2022.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display" data-execution_count="336">
 <div>
@@ -1901,13 +1869,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="section-3" class="level4">
-<h4 class="anchored" data-anchor-id="section-3"><strong>2023</strong></h4>
+<section id="section-5" class="level5">
+<h5 class="anchored" data-anchor-id="section-5"><strong>2023</strong></h5>
+<p>Pull out crashes from 2023.</p>
 <div class="cell" data-tags="[]" data-execution_count="325">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>crash[<span class="st">'date_'</span>] <span class="op">=</span> crash[<span class="st">'date_'</span>].astype(<span class="bu">str</span>)</span>
-<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>crash_2023 <span class="op">=</span> crash[crash[<span class="st">'date_'</span>].<span class="bu">str</span>.contains(<span class="st">'2023'</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>crash[<span class="st">'date_'</span>] <span class="op">=</span> crash[<span class="st">'date_'</span>].astype(<span class="bu">str</span>)</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>crash_2023 <span class="op">=</span> crash[crash[<span class="st">'date_'</span>].<span class="bu">str</span>.contains(<span class="st">'2023'</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display" data-execution_count="325">
 <div>
@@ -2061,26 +2030,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div class="cell" data-tags="[]" data-execution_count="337">
-<details open="">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>street_merge_crash_2023 <span class="op">=</span> street.copy()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div class="cell" data-tags="[]" data-execution_count="338">
-<details open="">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new column in the geojson GeoDataFrame to store the point counts</span></span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>street_merge_crash_2023[<span class="st">'crash_2023'</span>] <span class="op">=</span> street[<span class="st">'geometry'</span>].<span class="bu">apply</span>(</span>
-<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">lambda</span> x: count_points_near_segment(x, crash_2023[<span class="st">'geometry'</span>])</span>
-<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
+<p>Count number of crash points near each street segment.</p>
 <div class="cell" data-tags="[]" data-execution_count="339">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>street_merge_crash_2023 <span class="op">=</span> street_merge_crash_2023.sort_values(by<span class="op">=</span><span class="st">'crash_2023'</span>, ascending<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>street_merge_crash_2023.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>street_merge_crash_2023 <span class="op">=</span> street.copy()</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new column in the geojson GeoDataFrame to store the point counts</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>street_merge_crash_2023[<span class="st">'crash_2023'</span>] <span class="op">=</span> street[<span class="st">'geometry'</span>].<span class="bu">apply</span>(</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">lambda</span> x: count_points_near_segment(x, crash_2023[<span class="st">'geometry'</span>])</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>street_merge_crash_2023 <span class="op">=</span> street_merge_crash_2023.sort_values(by<span class="op">=</span><span class="st">'crash_2023'</span>, ascending<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>street_merge_crash_2023.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display" data-execution_count="339">
 <div>
@@ -2163,16 +2123,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="combine-crash-data" class="level4">
-<h4 class="anchored" data-anchor-id="combine-crash-data"><strong>Combine Crash Data</strong></h4>
+<section id="combine-crash-data" class="level5">
+<h5 class="anchored" data-anchor-id="combine-crash-data"><strong>Combine Crash Data</strong></h5>
 <div class="cell" data-tags="[]" data-execution_count="340">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>street_merge_crash <span class="op">=</span> pd.merge(street_merge_crash_2022, </span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>                            street_merge_crash_2023, </span>
-<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>                            how <span class="op">=</span> <span class="st">'left'</span>, </span>
-<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>                            on <span class="op">=</span>[<span class="st">'R_HUNDRED'</span>, <span class="st">'CLASS'</span>, <span class="st">'STNAME'</span>, <span class="st">'ST_CODE'</span>, <span class="st">'SEG_ID'</span>,<span class="st">'Shape__Length'</span>,<span class="st">'geometry'</span>])</span>
-<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>street_merge_crash.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>street_merge_crash <span class="op">=</span> pd.merge(street_merge_crash_2022, </span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>                            street_merge_crash_2023, </span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>                            how <span class="op">=</span> <span class="st">'left'</span>, </span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>                            on <span class="op">=</span>[<span class="st">'R_HUNDRED'</span>, <span class="st">'CLASS'</span>, <span class="st">'STNAME'</span>, <span class="st">'ST_CODE'</span>, <span class="st">'SEG_ID'</span>,<span class="st">'Shape__Length'</span>,<span class="st">'geometry'</span>])</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>street_merge_crash.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display" data-execution_count="340">
 <div>
@@ -2260,70 +2220,59 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+<div class="cell" data-tags="[]" data-execution_count="368">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>street_merge_crash.to_file(<span class="st">"Data/street_merge_crash.geojson"</span>, driver<span class="op">=</span><span class="st">'GeoJSON'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
 </section>
 <section id="bicycle-level-of-traffic-stress" class="level3">
 <h3 class="anchored" data-anchor-id="bicycle-level-of-traffic-stress"><strong>Bicycle Level of Traffic Stress</strong></h3>
-<div class="cell" data-tags="[]">
-<details open="">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>bike_LTS <span class="op">=</span> gpd.read_file(<span class="st">"Data/Bike_LTS.geojson"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div class="cell" data-tags="[]">
-<details open="">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>bike_LTS <span class="op">=</span> bike_LTS[[<span class="st">'gid'</span>, <span class="st">'length'</span>, <span class="st">'lts_score'</span>, <span class="st">'geometry'</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div class="cell" data-tags="[]" data-execution_count="166">
-<details open="">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Download the Philadelphia city limits</span></span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://opendata.arcgis.com/datasets/405ec3da942d4e20869d4e1449a2be48_0.geojson"</span></span>
-<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>city_limits <span class="op">=</span> gpd.read_file(url).to_crs(epsg<span class="op">=</span><span class="dv">4326</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
+<p>Load in Bike Level of Traffic Stress data and city limits to trim the Bike LTS data to just Philadelphia.</p>
 <div class="cell" data-tags="[]" data-execution_count="167">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(bike_LTS.crs)</span>
-<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(city_limits.crs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>bike_LTS <span class="op">=</span> gpd.read_file(<span class="st">"Data/Bike_LTS.geojson"</span>)</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>bike_LTS <span class="op">=</span> bike_LTS[[<span class="st">'gid'</span>, <span class="st">'length'</span>, <span class="st">'lts_score'</span>, <span class="st">'geometry'</span>]]</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Download the Philadelphia city limits</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://opendata.arcgis.com/datasets/405ec3da942d4e20869d4e1449a2be48_0.geojson"</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>city_limits <span class="op">=</span> gpd.read_file(url).to_crs(epsg<span class="op">=</span><span class="dv">4326</span>)</span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(bike_LTS.crs)</span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(city_limits.crs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>EPSG:4326
 EPSG:4326</code></pre>
 </div>
 </div>
-<div class="cell" data-tags="[]">
-<details open="">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>bike_LTS_clip <span class="op">=</span> gpd.overlay(bike_LTS, city_limits, how<span class="op">=</span><span class="st">'intersection'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
+<p>Iterate over each street segment to pull the LTS score from the nearest bike_LTS segment.</p>
 <div class="cell" data-tags="[]" data-execution_count="356">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>street_merge_bike <span class="op">=</span> street.copy()</span>
-<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Iterate over each row in the 'street' GeoDataFrame</span></span>
-<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> index, street_row <span class="kw">in</span> street.iterrows():</span>
-<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Extract the geometry of the street line segment</span></span>
-<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a>    street_geometry <span class="op">=</span> street_row[<span class="st">'geometry'</span>]</span>
-<span id="cb51-7"><a href="#cb51-7" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb51-8"><a href="#cb51-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create a Point geometry from the centroid of the street line segment</span></span>
-<span id="cb51-9"><a href="#cb51-9" aria-hidden="true" tabindex="-1"></a>    street_centroid <span class="op">=</span> Point(street_geometry.centroid)</span>
-<span id="cb51-10"><a href="#cb51-10" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb51-11"><a href="#cb51-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Find the index of the nearest 'bike_LTS_clip' line segment</span></span>
-<span id="cb51-12"><a href="#cb51-12" aria-hidden="true" tabindex="-1"></a>    nearest_bike_index <span class="op">=</span> bike_LTS_clip.geometry.distance(street_centroid).idxmin()</span>
-<span id="cb51-13"><a href="#cb51-13" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb51-14"><a href="#cb51-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Extract the 'lts_score' from the nearest 'bike_LTS_clip' line segment</span></span>
-<span id="cb51-15"><a href="#cb51-15" aria-hidden="true" tabindex="-1"></a>    lts_score <span class="op">=</span> bike_LTS_clip.loc[nearest_bike_index, <span class="st">'lts_score'</span>]</span>
-<span id="cb51-16"><a href="#cb51-16" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb51-17"><a href="#cb51-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add a new column to the result GeoDataFrame with the 'lts_score' value</span></span>
-<span id="cb51-18"><a href="#cb51-18" aria-hidden="true" tabindex="-1"></a>    street_merge_bike.at[index, <span class="st">'nearest_lts_score'</span>] <span class="op">=</span> lts_score</span>
-<span id="cb51-19"><a href="#cb51-19" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb51-20"><a href="#cb51-20" aria-hidden="true" tabindex="-1"></a>street_merge_bike.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>street_merge_bike <span class="op">=</span> street.copy()</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Iterate over each row in the 'street' GeoDataFrame</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> index, street_row <span class="kw">in</span> street.iterrows():</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Extract the geometry of the street line segment</span></span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>    street_geometry <span class="op">=</span> street_row[<span class="st">'geometry'</span>]</span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create a Point geometry from the centroid of the street line segment</span></span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>    street_centroid <span class="op">=</span> Point(street_geometry.centroid)</span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Find the index of the nearest 'bike_LTS_clip' line segment</span></span>
+<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a>    nearest_bike_index <span class="op">=</span> bike_LTS_clip.geometry.distance(street_centroid).idxmin()</span>
+<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Extract the 'lts_score' from the nearest 'bike_LTS_clip' line segment</span></span>
+<span id="cb33-15"><a href="#cb33-15" aria-hidden="true" tabindex="-1"></a>    lts_score <span class="op">=</span> bike_LTS_clip.loc[nearest_bike_index, <span class="st">'lts_score'</span>]</span>
+<span id="cb33-16"><a href="#cb33-16" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb33-17"><a href="#cb33-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add a new column to the result GeoDataFrame with the 'lts_score' value</span></span>
+<span id="cb33-18"><a href="#cb33-18" aria-hidden="true" tabindex="-1"></a>    street_merge_bike.at[index, <span class="st">'nearest_lts_score'</span>] <span class="op">=</span> lts_score</span>
+<span id="cb33-19"><a href="#cb33-19" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb33-20"><a href="#cb33-20" aria-hidden="true" tabindex="-1"></a>street_merge_bike.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
 <pre><code>C:\Users\epark\AppData\Local\Temp\ipykernel_25588\2918275708.py:12: UserWarning: Geometry is in a geographic CRS. Results from 'distance' are likely incorrect. Use 'GeoSeries.to_crs()' to re-project geometries to a projected CRS before this operation.
@@ -2413,25 +2362,38 @@ C:\Users\epark\AppData\Local\Temp\ipykernel_25588\2918275708.py:12: UserWarning:
 </div>
 </div>
 </div>
+<div class="cell" data-tags="[]" data-execution_count="369">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>street_merge_bike.to_file(<span class="st">"Data/street_merge_bike.geojson"</span>, driver<span class="op">=</span><span class="st">'GeoJSON'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
 <section id="combine-all-data" class="level3">
 <h3 class="anchored" data-anchor-id="combine-all-data"><strong>Combine All Data</strong></h3>
-<div class="cell" data-tags="[]" data-execution_count="357">
+<div class="cell" data-tags="[]" data-execution_count="30">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>street_merge <span class="op">=</span> pd.merge(street, street_merge_crash, how<span class="op">=</span><span class="st">'left'</span>, on<span class="op">=</span>[<span class="st">'R_HUNDRED'</span>, <span class="st">'CLASS'</span>, <span class="st">'STNAME'</span>, <span class="st">'ST_CODE'</span>, <span class="st">'SEG_ID'</span>, <span class="st">'Shape__Length'</span>, <span class="st">'geometry'</span>])</span>
-<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>street_merge <span class="op">=</span> pd.merge(street_merge, street_merge_truck, how<span class="op">=</span><span class="st">'left'</span>, on<span class="op">=</span>[<span class="st">'R_HUNDRED'</span>, <span class="st">'CLASS'</span>, <span class="st">'STNAME'</span>, <span class="st">'ST_CODE'</span>, <span class="st">'SEG_ID'</span>, <span class="st">'Shape__Length'</span>, <span class="st">'geometry'</span>])</span>
-<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a>street_merge <span class="op">=</span> pd.merge(street_merge, street_merge_pav, how<span class="op">=</span><span class="st">'left'</span>, on<span class="op">=</span>[<span class="st">'R_HUNDRED'</span>, <span class="st">'CLASS'</span>, <span class="st">'STNAME'</span>, <span class="st">'ST_CODE'</span>, <span class="st">'SEG_ID'</span>, <span class="st">'Shape__Length'</span>, <span class="st">'geometry'</span>])</span>
-<span id="cb53-6"><a href="#cb53-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-7"><a href="#cb53-7" aria-hidden="true" tabindex="-1"></a>street_merge <span class="op">=</span> pd.merge(street_merge, street_merge_311, how<span class="op">=</span><span class="st">'left'</span>, on<span class="op">=</span>[<span class="st">'R_HUNDRED'</span>, <span class="st">'CLASS'</span>, <span class="st">'STNAME'</span>, <span class="st">'ST_CODE'</span>, <span class="st">'SEG_ID'</span>, <span class="st">'Shape__Length'</span>, <span class="st">'geometry'</span>])</span>
-<span id="cb53-8"><a href="#cb53-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-9"><a href="#cb53-9" aria-hidden="true" tabindex="-1"></a>street_merge <span class="op">=</span> pd.merge(street_merge, street_merge_bike, how<span class="op">=</span><span class="st">'left'</span>, on<span class="op">=</span>[<span class="st">'R_HUNDRED'</span>, <span class="st">'CLASS'</span>, <span class="st">'STNAME'</span>, <span class="st">'ST_CODE'</span>, <span class="st">'SEG_ID'</span>, <span class="st">'Shape__Length'</span>, <span class="st">'geometry'</span>])</span>
-<span id="cb53-10"><a href="#cb53-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-11"><a href="#cb53-11" aria-hidden="true" tabindex="-1"></a>street_merge.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>street_merge_crash<span class="op">=</span>gpd.read_file(<span class="st">"Data/street_merge_crash.geojson"</span>)</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>street_merge_truck<span class="op">=</span>gpd.read_file(<span class="st">"Data/street_merge_truck.geojson"</span>)</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>street_merge_pav<span class="op">=</span>gpd.read_file(<span class="st">"Data/street_merge_pav.geojson"</span>)</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>street_merge_311<span class="op">=</span>gpd.read_file(<span class="st">"Data/street_merge_311.geojson"</span>)</span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>street_merge_bike<span class="op">=</span>gpd.read_file(<span class="st">"Data/street_merge_bike.geojson"</span>)</span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a>street_merge <span class="op">=</span> pd.merge(street, street_merge_crash, how<span class="op">=</span><span class="st">'left'</span>, on<span class="op">=</span>[<span class="st">'R_HUNDRED'</span>, <span class="st">'CLASS'</span>, <span class="st">'STNAME'</span>, <span class="st">'ST_CODE'</span>, <span class="st">'SEG_ID'</span>, <span class="st">'Shape__Length'</span>, <span class="st">'geometry'</span>])</span>
+<span id="cb36-9"><a href="#cb36-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-10"><a href="#cb36-10" aria-hidden="true" tabindex="-1"></a>street_merge <span class="op">=</span> pd.merge(street_merge, street_merge_truck, how<span class="op">=</span><span class="st">'left'</span>, on<span class="op">=</span>[<span class="st">'R_HUNDRED'</span>, <span class="st">'CLASS'</span>, <span class="st">'STNAME'</span>, <span class="st">'ST_CODE'</span>, <span class="st">'SEG_ID'</span>, <span class="st">'Shape__Length'</span>, <span class="st">'geometry'</span>])</span>
+<span id="cb36-11"><a href="#cb36-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-12"><a href="#cb36-12" aria-hidden="true" tabindex="-1"></a>street_merge <span class="op">=</span> pd.merge(street_merge, street_merge_pav, how<span class="op">=</span><span class="st">'left'</span>, on<span class="op">=</span>[<span class="st">'R_HUNDRED'</span>, <span class="st">'CLASS'</span>, <span class="st">'STNAME'</span>, <span class="st">'ST_CODE'</span>, <span class="st">'SEG_ID'</span>, <span class="st">'Shape__Length'</span>, <span class="st">'geometry'</span>])</span>
+<span id="cb36-13"><a href="#cb36-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-14"><a href="#cb36-14" aria-hidden="true" tabindex="-1"></a>street_merge <span class="op">=</span> pd.merge(street_merge, street_merge_311, how<span class="op">=</span><span class="st">'left'</span>, on<span class="op">=</span>[<span class="st">'R_HUNDRED'</span>, <span class="st">'CLASS'</span>, <span class="st">'STNAME'</span>, <span class="st">'ST_CODE'</span>, <span class="st">'SEG_ID'</span>, <span class="st">'Shape__Length'</span>, <span class="st">'geometry'</span>])</span>
+<span id="cb36-15"><a href="#cb36-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-16"><a href="#cb36-16" aria-hidden="true" tabindex="-1"></a>street_merge <span class="op">=</span> pd.merge(street_merge, street_merge_bike, how<span class="op">=</span><span class="st">'left'</span>, on<span class="op">=</span>[<span class="st">'R_HUNDRED'</span>, <span class="st">'CLASS'</span>, <span class="st">'STNAME'</span>, <span class="st">'ST_CODE'</span>, <span class="st">'SEG_ID'</span>, <span class="st">'Shape__Length'</span>, <span class="st">'geometry'</span>])</span>
+<span id="cb36-17"><a href="#cb36-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-18"><a href="#cb36-18" aria-hidden="true" tabindex="-1"></a>street_merge.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="357">
+<div class="cell-output cell-output-display" data-execution_count="30">
 <div>
 
 
@@ -2553,10 +2515,10 @@ C:\Users\epark\AppData\Local\Temp\ipykernel_25588\2918275708.py:12: UserWarning:
 </div>
 </div>
 </div>
-<div class="cell" data-tags="[]" data-execution_count="358">
+<div class="cell" data-tags="[]" data-execution_count="31">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>street_merge.to_file(<span class="st">"Data/street_merge.geojson"</span>, driver<span class="op">=</span><span class="st">'GeoJSON'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>street_merge.to_file(<span class="st">"Data/street_merge.geojson"</span>, driver<span class="op">=</span><span class="st">'GeoJSON'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 

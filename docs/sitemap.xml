@@ -1,27 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://musa-550-fall-2023.github.io/quarto-website-template/index.html</loc>
-    <lastmod>2023-11-02T20:26:06.130Z</lastmod>
+    <loc>https://musa-550-fall-2023.github.io/final_project_EP/process.html</loc>
+    <lastmod>2023-12-18T18:17:19.510Z</lastmod>
   </url>
   <url>
-    <loc>https://musa-550-fall-2023.github.io/quarto-website-template/analysis/4-folium.html</loc>
-    <lastmod>2023-11-02T19:44:55.050Z</lastmod>
+    <loc>https://musa-550-fall-2023.github.io/final_project_EP/FinalProject/Step4v3.html</loc>
+    <lastmod>2023-12-18T18:17:17.106Z</lastmod>
   </url>
   <url>
-    <loc>https://musa-550-fall-2023.github.io/quarto-website-template/analysis/2-static-images.html</loc>
-    <lastmod>2023-11-02T19:44:51.764Z</lastmod>
-  </url>
-  <url>
-    <loc>https://musa-550-fall-2023.github.io/final_project_EP/index.html</loc>
-    <lastmod>2023-12-11T02:00:11.743Z</lastmod>
-  </url>
-  <url>
-    <loc>https://musa-550-fall-2023.github.io/final_project_EP/FinalProject/Step1.html</loc>
-    <lastmod>2023-12-11T02:00:46.502Z</lastmod>
+    <loc>https://musa-550-fall-2023.github.io/final_project_EP/FinalProject/Step4.html</loc>
+    <lastmod>2023-12-18T18:16:11.845Z</lastmod>
   </url>
   <url>
     <loc>https://musa-550-fall-2023.github.io/final_project_EP/FinalProject/Step2.html</loc>
-    <lastmod>2023-12-11T02:00:43.132Z</lastmod>
+    <lastmod>2023-12-18T18:15:37.261Z</lastmod>
+  </url>
+  <url>
+    <loc>https://musa-550-fall-2023.github.io/final_project_EP/FinalProject/Data/Untitled.html</loc>
+    <lastmod>2023-12-18T18:15:32.390Z</lastmod>
+  </url>
+  <url>
+    <loc>https://musa-550-fall-2023.github.io/final_project_EP/analysis/index.html</loc>
+    <lastmod>2023-12-18T18:15:30.555Z</lastmod>
+  </url>
+  <url>
+    <loc>https://musa-550-fall-2023.github.io/final_project_EP/analysis/5-lecture9A.html</loc>
+    <lastmod>2023-12-18T18:15:27.520Z</lastmod>
+  </url>
+  <url>
+    <loc>https://musa-550-fall-2023.github.io/final_project_EP/analysis/3-altair-hvplot.html</loc>
+    <lastmod>2023-12-18T18:15:24.402Z</lastmod>
+  </url>
+  <url>
+    <loc>https://musa-550-fall-2023.github.io/final_project_EP/analysis/1-python-code-blocks.html</loc>
+    <lastmod>2023-12-18T18:15:20.761Z</lastmod>
+  </url>
+  <url>
+    <loc>https://musa-550-fall-2023.github.io/final_project_EP/about.html</loc>
+    <lastmod>2023-12-18T18:15:02.766Z</lastmod>
+  </url>
+  <url>
+    <loc>https://musa-550-fall-2023.github.io/final_project_EP/analysis/2-static-images.html</loc>
+    <lastmod>2023-12-18T18:15:22.352Z</lastmod>
+  </url>
+  <url>
+    <loc>https://musa-550-fall-2023.github.io/final_project_EP/analysis/4-folium.html</loc>
+    <lastmod>2023-12-18T18:15:25.655Z</lastmod>
+  </url>
+  <url>
+    <loc>https://musa-550-fall-2023.github.io/final_project_EP/analysis/6-lecture6A.html</loc>
+    <lastmod>2023-12-18T18:15:29.713Z</lastmod>
+  </url>
+  <url>
+    <loc>https://musa-550-fall-2023.github.io/final_project_EP/conclusion.html</loc>
+    <lastmod>2023-12-18T18:15:31.426Z</lastmod>
+  </url>
+  <url>
+    <loc>https://musa-550-fall-2023.github.io/final_project_EP/FinalProject/Step1.html</loc>
+    <lastmod>2023-12-18T18:15:33.773Z</lastmod>
+  </url>
+  <url>
+    <loc>https://musa-550-fall-2023.github.io/final_project_EP/FinalProject/Step3.html</loc>
+    <lastmod>2023-12-18T18:15:38.847Z</lastmod>
+  </url>
+  <url>
+    <loc>https://musa-550-fall-2023.github.io/final_project_EP/FinalProject/Step4v2.html</loc>
+    <lastmod>2023-12-18T18:16:41.542Z</lastmod>
+  </url>
+  <url>
+    <loc>https://musa-550-fall-2023.github.io/final_project_EP/index.html</loc>
+    <lastmod>2023-12-18T18:17:18.377Z</lastmod>
   </url>
 </urlset>

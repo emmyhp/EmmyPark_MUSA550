@@ -1,0 +1,14 @@
+---
+title: "Project Process"
+---
+
+
+The process to creating this model involves the following steps:
+
+[**Step 1**](FinalProject/Step1.ipynb): Gathering the data, downloading the information from OpenDataPhilly/DVRPC and using an API to gather 311 data.
+
+[**Step 2**](FinalProject/Step2.ipynb): Cleaning that data and joining it to the street network for analysis.
+
+[**Step 3**](FinalProject/Step3.ipynb): Creating the predictive model and testing its predictive power with the 2023 Street Paving Program and List.
+
+[**Step 4**](FinalProject/Step4v3.ipynb): Predict the streets being repaved in 2024 and mapping these streets.
